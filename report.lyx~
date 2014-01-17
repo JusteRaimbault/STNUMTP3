@@ -1,0 +1,771 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+STNUM - TP3
+\begin_inset Newline newline
+\end_inset
+
+Statistique Paramétrique
+\end_layout
+
+\begin_layout Author
+
+\noun on
+Juste Raimbault
+\end_layout
+
+\begin_layout Section
+Comparaison des estimateurs du paramètre de position
+\end_layout
+
+\begin_layout Paragraph
+Question 2
+\end_layout
+
+\begin_layout Standard
+Une loi Gaussienne est symétrique par rapport à sa moyenne, donc 
+\begin_inset Formula $\theta=5$
+\end_inset
+
+ ici.
+\end_layout
+
+\begin_layout Paragraph
+Question 3.a.1
+\end_layout
+
+\begin_layout Standard
+Par définition, 
+\begin_inset Formula $\theta_{1}=(\frac{1}{i}\sum_{k=1}^{i}u_{i})_{1\leq i\leq n}$
+\end_inset
+
+, ainsi la composante 
+\begin_inset Formula $i$
+\end_inset
+
+ de 
+\begin_inset Formula $\theta_{1}$
+\end_inset
+
+ est la moyenne des 
+\begin_inset Formula $i$
+\end_inset
+
+ premières composantes de 
+\begin_inset Formula $U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+De même, 
+\begin_inset Formula $[\theta_{2}]_{i}$
+\end_inset
+
+ est la médiane des 
+\begin_inset Formula $i$
+\end_inset
+
+ premières composantes de 
+\begin_inset Formula $U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Question 3.a.2
+\end_layout
+
+\begin_layout Standard
+L'instruction de type dans un plot permet de définir le type de tracé, en
+ l'occurence ici une ligne géométrique reliant les points de la courbe.
+\end_layout
+
+\begin_layout Paragraph
+Question 3.b
+\end_layout
+
+\begin_layout Standard
+On remarque sur les graphes que les estimateurs convergent rapidement vers
+ la valeur attendue du paramètre.
+\end_layout
+
+\begin_layout Standard
+La matrice renvoyée correspond aux vecteurs 
+\begin_inset Formula $\theta_{1}$
+\end_inset
+
+ et 
+\begin_inset Formula $\theta_{2}$
+\end_inset
+
+ dans deux colonnes juxtaposées.
+\end_layout
+
+\begin_layout Paragraph
+Question 3.c
+\end_layout
+
+\begin_layout Standard
+En lançant la fonction modifiée sur de très grandes valeurs de 
+\begin_inset Formula $n$
+\end_inset
+
+, on peut supposer que l'estimateur 
+\begin_inset Formula $\hat{\theta_{3}}$
+\end_inset
+
+ n'est pas convergent, comme le montre la figure ci-dessous (
+\begin_inset Formula $n=100000$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename convEstim.pdf
+	lyxscale 10
+	scale 30
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Question 4.a
+\end_layout
+
+\begin_layout Standard
+La commande 
+\family typewriter
+apply
+\family default
+ permet d'appliquer la fonction passée en troisième argument aux sous-éléments
+ de dimension le second argument du tableau passé en premier argument.
+ Dans notre cas, on applique la fonction à chaque élément du vecteur.
+\end_layout
+
+\begin_layout Paragraph
+Question 4.b
+\end_layout
+
+\begin_layout Standard
+On va préferer l'estimateur 
+\begin_inset Formula $\hat{\theta_{1}}$
+\end_inset
+
+ au vu des boxplots ci-dessous, car on préfère l'estimateur à moindre dispersion.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename boxCompEst.pdf
+	lyxscale 10
+	scale 30
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Question 4.c
+\end_layout
+
+\begin_layout Standard
+Dans le cas de la loi uniforme, l'estimateur de loin le plus efficace est
+ 
+\begin_inset Formula $\hat{\theta_{3}}$
+\end_inset
+
+ comme le montre le boxplot suivant.
+ En effet, une loi uniforme fournira intuitivement beaucoup plus rapidement
+ le min et le max plutôt qu'une moyenne ou une mediane stable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename EstUnif.pdf
+	lyxscale 10
+	scale 30
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Question 4.d.i
+\end_layout
+
+\begin_layout Standard
+Enfin pour la loi de Cauchy, on s'aperçoit que 
+\begin_inset Formula $\hat{\theta_{3}}$
+\end_inset
+
+ présente de très larges outliers et apparait assez inefficace (graphe ci-dessou
+s):
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename EstCauchyTheta3.pdf
+	lyxscale 10
+	scale 30
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Question 4.d.ii
+\end_layout
+
+\begin_layout Standard
+On relance sans le calcul de 
+\begin_inset Formula $\hat{\theta_{3}}$
+\end_inset
+
+ our pouvoir comparer 
+\begin_inset Formula $\hat{\theta_{1}}$
+\end_inset
+
+ et 
+\begin_inset Formula $\hat{\theta_{2}}$
+\end_inset
+
+.
+ On peut conclure que la médiane est bien meilleure car la distribution
+ ne présente pas d'outliers en comparaison avec la moyenne.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename EstCauchy2.pdf
+	lyxscale 10
+	scale 30
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En conclusion, la loi normale a pour meilleur estimateur la moyenne, la
+ loi uniforme le min-max et la loi de Cauchy la médiane.
+\end_layout
+
+\begin_layout Paragraph
+Question 5
+\end_layout
+
+\begin_layout Standard
+Comme on ne peut savoir a priori le type de loi, il faudrait lancer chacun
+ de ces trois estimateurs et supprimer incrémentalement le plus mauvais
+ jusqu'à obtenir un seul estimateur, qui correspondra a priori à la loi
+ de la distribution comme montré en 4 si cette loi existe.
+\end_layout
+
+\begin_layout Section
+Intervalles de confiance (IC)
+\end_layout
+
+\begin_layout Paragraph
+Question 2.a
+\end_layout
+
+\begin_layout Standard
+On passe en argument à la fonction 
+\family typewriter
+quantile
+\family default
+ les probabilités 0.025 et 0.975 pour avoir les quantiles voulus, qui sont
+ de -1.897374 et 1.966214.
+\end_layout
+
+\begin_layout Paragraph
+Question 2.b
+\end_layout
+
+\begin_layout Standard
+La distribution théorique attendue est 
+\begin_inset Quotes eld
+\end_inset
+
+normalisée
+\begin_inset Quotes erd
+\end_inset
+
+, i.
+ e.
+ ne dépend pas de 
+\begin_inset Formula $\mu$
+\end_inset
+
+ ni de 
+\begin_inset Formula $\sigma$
+\end_inset
+
+, on s'attend à obtenir les mêmes résultats, ce qu'on constate numériquement
+ (avec des oscillations qui ne dépassent pas celles observées à moyenne
+ et écart-type fixés).
+\end_layout
+
+\begin_layout Paragraph
+Question 2.c
+\end_layout
+
+\begin_layout Standard
+Augmenter 
+\begin_inset Formula $N$
+\end_inset
+
+ ne change pas les résultats obtenus comme le montre la courbe suivante
+ pour le premier quantile par exemple, les fluctuations étant uniquement
+ aléatoires:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename firstquantile.pdf
+	lyxscale 10
+	scale 30
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Question 2.d
+\end_layout
+
+\begin_layout Standard
+Par définition de 
+\begin_inset Formula $a$
+\end_inset
+
+ et 
+\begin_inset Formula $b$
+\end_inset
+
+, on a 
+\begin_inset Formula $\mathbb{P}(T<a)=0.025$
+\end_inset
+
+ et 
+\begin_inset Formula $\mathbb{P}(T>b)=1-0.975=0.025$
+\end_inset
+
+ donc 
+\begin_inset Formula $\mathbb{P}(T\in[a,b])=95\%$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Question 2.e
+\end_layout
+
+\begin_layout Standard
+On a 
+\begin_inset Formula $T_{n}\in[a,b]\iff\frac{(\bar{X}-\mu)\sqrt{n}}{S_{n}}\in[a,b]\iff\bar{X}-\mu\in[\frac{S_{n}}{\sqrt{n}}a,\frac{S_{n}}{\sqrt{n}}b]\iff\mu\in[\bar{X}-\frac{S_{n}}{\sqrt{n}}b,\bar{X}-\frac{S_{n}}{\sqrt{n}}a]$
+\end_inset
+
+, d'où le résultat.
+\end_layout
+
+\begin_layout Standard
+Par définition de l'intervalle de confiance, on a 95% des échantillons qui
+ vérifient cette contrainte sur la moyenne.
+\end_layout
+
+\begin_layout Paragraph
+Question 3.b
+\end_layout
+
+\begin_layout Standard
+On a 
+\begin_inset Formula $n=10$
+\end_inset
+
+, et on obtient en utilisant la méthode précédente (quantiles de la loi
+ de student, avec 
+\begin_inset Formula $\mu$
+\end_inset
+
+ moyenne de la série), 
+\begin_inset Formula $(a,b)=(-2.21,2.23)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Question 3.c
+\end_layout
+
+\begin_layout Standard
+On obtient l'intervalle de confiance pour la moyenne: 
+\begin_inset Formula $\mu\in[19.13,20.29]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Calcul de l’EMV à l’aide de la commande 
+\family typewriter
+mle
+\end_layout
+
+\begin_layout Paragraph
+Question 2.a
+\end_layout
+
+\begin_layout Standard
+La commande 
+\family typewriter
+dgamma
+\family default
+ calcule la valeur de la densité 
+\begin_inset Formula $p_{X}$
+\end_inset
+
+ aux points du vecteur donné en argument, l'option 
+\family typewriter
+log=true
+\family default
+ permet d'obtenir 
+\begin_inset Formula $log(p_{X})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Question 2.b
+\end_layout
+
+\begin_layout Standard
+Avec 
+\begin_inset Formula $a,\sigma>0$
+\end_inset
+
+ et 
+\begin_inset Formula $X=(x_{i})_{1\leq i\leq n}$
+\end_inset
+
+, on a 
+\begin_inset Formula $ll(a,\sigma)=-\sum_{i=1}^{n}log(p_{X}(x_{i},a,\sigma))=-log(\prod_{i=1}^{n}p_{X}(x_{i},a,\sigma))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Question 2.c
+\end_layout
+
+\begin_layout Standard
+L'estimateur du maximum de vraissemblance est obtenu en minimisant la fonction
+ 
+\begin_inset Formula $ll$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Question 3
+\end_layout
+
+\begin_layout Standard
+On obtient 
+\begin_inset Formula $a=8.39\pm1.64$
+\end_inset
+
+ et 
+\begin_inset Formula $\sigma=6.19\pm1.25$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Question 4
+\end_layout
+
+\begin_layout Standard
+L'IC de niveau 95% pour 
+\begin_inset Formula $a$
+\end_inset
+
+ est 
+\begin_inset Formula $[5.57,12.05]$
+\end_inset
+
+.
+ Celui de niveau 85% pour 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ est 
+\begin_inset Formula $[4.27,9.48]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Question 5
+\end_layout
+
+\begin_layout Standard
+La surface a été transformée par la fonction 
+\begin_inset Formula $f(z)=log(0.001+\frac{z-z_{min}}{z_{max}-z_{min}})$
+\end_inset
+
+ (on normalise pour avoir des valeurs entre 0.001 et 1.001 et on prend le
+ log).
+ Sans la transormation, la surface est en majorité quasi-plate et on ne
+ peut visualiser correctement la position du minimum sur la partie plate.
+\end_layout
+
+\begin_layout Paragraph
+Question 6
+\end_layout
+
+\begin_layout Standard
+On obtient 
+\begin_inset Formula $a=5.14$
+\end_inset
+
+ et 
+\begin_inset Formula $\sigma=2.88$
+\end_inset
+
+ avec pour intervalles de confiance à 95% respectifs 
+\begin_inset Formula $[4.71,5.59]$
+\end_inset
+
+ et 
+\begin_inset Formula $[2.64,3.16]$
+\end_inset
+
+ ce qui est assez proches des vraies valeurs.
+\end_layout
+
+\begin_layout Paragraph
+Question 7
+\end_layout
+
+\begin_layout Standard
+On s'apercoit que le point obtenu est relativement constant lorsqu'on fait
+ varier les conditions initiales (
+\begin_inset Formula $a=1,2,3,4;\sigma=1,2,3,4$
+\end_inset
+
+), par contre on obtient des points singuliers comme pour 
+\begin_inset Formula $\sigma=0.5$
+\end_inset
+
+ pour lequel le résultat diverge.
+\end_layout
+
+\begin_layout Paragraph
+Question 8.a
+\end_layout
+
+\begin_layout Standard
+On minimise la log-vraisemblance comme pour l'estimation des paramètres
+ de la loi gamma; la fonction est une adaptation de la fonction pour la
+ loi gamma.
+\end_layout
+
+\begin_layout Paragraph
+Question 8.b
+\end_layout
+
+\begin_layout Standard
+Les estimations obtenues sont 
+\begin_inset Formula $a=6.53$
+\end_inset
+
+ (IC 
+\begin_inset Formula $[3.65,9.39]$
+\end_inset
+
+) et 
+\begin_inset Formula $s=10.14$
+\end_inset
+
+ (IC 
+\begin_inset Formula $[7.68,13.41]$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Paragraph
+Question 8.c
+\end_layout
+
+\begin_layout Standard
+Pour 
+\begin_inset Formula $a>0,s>1$
+\end_inset
+
+, le résultat obtenu semble être constant.
+ Cela est rendu possible car la fonction de log-vraissemblance est convexe
+ pour une loi de Cauchy, l'optimisation donne donc toujours le même point
+ sur cet ensemble.
+\end_layout
+
+\begin_layout Paragraph
+Question 8.d
+\end_layout
+
+\begin_layout Standard
+On obtient la surface:
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename 3d.pdf
+	lyxscale 10
+	scale 30
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

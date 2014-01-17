@@ -1,0 +1,1133 @@
+#LyX file created by tex2lyx 2.0.5.1
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\usepackage{babel}
+
+\end_preamble
+\use_default_options false
+\language english
+\language_package default
+\inputencoding latin9
+\fontencoding T1
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\paperfontsize default
+\spacing single
+\use_hyperref 0
+\papersize default
+\use_geometry true
+\use_amsmath 2
+\use_esint 1
+\use_mhchem 0
+\use_mathdots 0
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+STNUM - TP3
+\begin_inset Newline newline
+\end_inset
+
+ Statistique ParamÃ©trique
+\end_layout
+
+\begin_layout Author
+
+
+\noun on
+Juste Raimbault
+\noun default
+
+\end_layout
+
+\begin_layout Section
+
+Comparaison des estimateurs du paramÃštre de position
+\end_layout
+
+\begin_layout Paragraph
+
+Question 2
+\end_layout
+
+\begin_layout Standard
+
+Une loi Gaussienne est symÃ©trique par rapport Ã  sa moyenne, donc 
+\begin_inset Formula $\theta=5$
+\end_inset
+
+ ici.
+\end_layout
+
+\begin_layout Paragraph
+
+Question 3.a.1
+\end_layout
+
+\begin_layout Standard
+
+Par dÃ©finition, 
+\begin_inset Formula $\theta_{1}=(\frac{1}{i}\sum_{k=1}^{i}u_{i})_{1\leq i\leq n}$
+\end_inset
+
+, ainsi la composante 
+\begin_inset Formula $i$
+\end_inset
+
+ de 
+\begin_inset Formula $\theta_{1}$
+\end_inset
+
+ est la moyenne des 
+\begin_inset Formula $i$
+\end_inset
+
+ premiÃšres composantes de 
+\begin_inset Formula $U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+De mÃªme, 
+\begin_inset Formula $[\theta_{2}]_{i}$
+\end_inset
+
+ est la mÃ©diane des 
+\begin_inset Formula $i$
+\end_inset
+
+ premiÃšres composantes de 
+\begin_inset Formula $U$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+
+Question 3.a.2
+\end_layout
+
+\begin_layout Standard
+
+L'instruction de type dans un plot permet de dÃ©finir le type de tracÃ©, en l'occurence ici une ligne gÃ©omÃ©trique reliant les points de la courbe.
+\end_layout
+
+\begin_layout Paragraph
+
+Question 3.b
+\end_layout
+
+\begin_layout Standard
+
+On remarque sur les graphes que les estimateurs convergent rapidement vers la valeur attendue du paramÃštre.
+\end_layout
+
+\begin_layout Standard
+
+La matrice renvoyÃ©e correspond aux vecteurs 
+\begin_inset Formula $\theta_{1}$
+\end_inset
+
+ et 
+\begin_inset Formula $\theta_{2}$
+\end_inset
+
+ dans deux colonnes juxtaposÃ©es.
+\end_layout
+
+\begin_layout Paragraph
+
+Question 3.c
+\end_layout
+
+\begin_layout Standard
+
+En lanÃ§ant la fonction modifiÃ©e sur de trÃšs grandes valeurs de 
+\begin_inset Formula $n$
+\end_inset
+
+, on peut supposer que l'estimateur 
+\begin_inset Formula $\hat{\theta_{3}}$
+\end_inset
+
+ n'est pas convergent, comme le montre la figure ci-dessous (
+\begin_inset Formula $n=100000$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset space \hfill{}
+
+\end_inset
+
+
+\begin_inset Graphics 
+	filename convEstim.pdf
+	scale 30
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+
+Question 4.a
+\end_layout
+
+\begin_layout Standard
+
+La commande 
+\family typewriter
+apply
+\family default
+ permet d'appliquer la fonction passÃ©e en troisiÃšme argument aux sous-Ã©lÃ©ments de dimension le second argument du tableau passÃ© en premier argument. Dans notre cas, on applique la fonction Ã  chaque Ã©lÃ©ment du vecteur.
+\end_layout
+
+\begin_layout Paragraph
+
+Question 4.b
+\end_layout
+
+\begin_layout Standard
+
+On va prÃ©ferer l'estimateur 
+\begin_inset Formula $\hat{\theta_{1}}$
+\end_inset
+
+ au vu des boxplots ci-dessous, car on prÃ©fÃšre l'estimateur Ã  moindre dispersion.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset space \hfill{}
+
+\end_inset
+
+
+\begin_inset Graphics 
+	filename boxCompEst.pdf
+	scale 30
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+
+Question 4.c
+\end_layout
+
+\begin_layout Standard
+
+Dans le cas de la loi uniforme, l'estimateur de loin le plus efficace est 
+\begin_inset Formula $\hat{\theta_{3}}$
+\end_inset
+
+ comme le montre le boxplot suivant. En effet, une loi uniforme fournira intuitivement beaucoup plus rapidement le min et le max plutÃŽt qu'une moyenne ou une mediane stable.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset space \hfill{}
+
+\end_inset
+
+
+\begin_inset Graphics 
+	filename EstUnif.pdf
+	scale 30
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+
+Question 4.d.i
+\end_layout
+
+\begin_layout Standard
+
+Enfin pour la loi de Cauchy, on s'aperÃ§oit que 
+\begin_inset Formula $\hat{\theta_{3}}$
+\end_inset
+
+ prÃ©sente de trÃšs larges outliers et apparait assez inefficace (graphe ci-dessous):
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset space \hfill{}
+
+\end_inset
+
+
+\begin_inset Graphics 
+	filename EstCauchyTheta3.pdf
+	scale 30
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+
+Question 4.d.ii
+\end_layout
+
+\begin_layout Standard
+
+On relance sans le calcul de 
+\begin_inset Formula $\hat{\theta_{3}}$
+\end_inset
+
+ our pouvoir comparer 
+\begin_inset Formula $\hat{\theta_{1}}$
+\end_inset
+
+ et 
+\begin_inset Formula $\hat{\theta_{2}}$
+\end_inset
+
+. On peut conclure que la mÃ©diane est bien meilleure car la distribution ne prÃ©sente pas d'outliers en comparaison avec la moyenne.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset space \hfill{}
+
+\end_inset
+
+
+\begin_inset Graphics 
+	filename EstCauchy2.pdf
+	scale 30
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+En conclusion, la loi normale a pour meilleur estimateur la moyenne, la loi uniforme le min-max et la loi de Cauchy la mÃ©diane.
+\end_layout
+
+\begin_layout Paragraph
+
+Question 5
+\end_layout
+
+\begin_layout Standard
+
+Comme on ne peut savoir a priori le type de loi, il faudrait lancer chacun de ces trois estimateurs et supprimer incrÃ©mentalement le plus mauvais jusqu'Ã  obtenir un seul estimateur, qui correspondra a priori Ã  la loi de la distribution comme montrÃ© en 4 si cette loi existe.
+\end_layout
+
+\begin_layout Section
+
+Intervalles de confiance (IC)
+\end_layout
+
+\begin_layout Paragraph
+
+Question 2.a
+\end_layout
+
+\begin_layout Standard
+
+On passe en argument Ã  la fonction 
+\family typewriter
+quantile
+\family default
+ les probabilitÃ©s 0.025 et 0.975 pour avoir les quantiles voulus, qui sont de -1.897374 et 1.966214.
+\end_layout
+
+\begin_layout Paragraph
+
+Question 2.b
+\end_layout
+
+\begin_layout Standard
+
+La distribution thÃ©orique attendue est 
+\begin_inset Quotes eld
+\end_inset
+
+normalisÃ©e
+\begin_inset Quotes erd
+\end_inset
+
+, i. e. ne dÃ©pend pas de 
+\begin_inset Formula $\mu$
+\end_inset
+
+ ni de 
+\begin_inset Formula $\sigma$
+\end_inset
+
+, on s'attend Ã  obtenir les mÃªmes rÃ©sultats, ce qu'on constate numÃ©riquement (avec des oscillations qui ne dÃ©passent pas celles observÃ©es Ã  moyenne et Ã©cart-type fixÃ©s).
+\end_layout
+
+\begin_layout Paragraph
+
+Question 2.c
+\end_layout
+
+\begin_layout Standard
+
+Augmenter 
+\begin_inset Formula $N$
+\end_inset
+
+ ne change pas les rÃ©sultats obtenus comme le montre la courbe suivante pour le premier quantile par exemple, les fluctuations Ã©tant uniquement alÃ©atoires:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset space \hfill{}
+
+\end_inset
+
+
+\begin_inset Graphics 
+	filename firstquantile.pdf
+	scale 30
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+
+Question 2.d
+\end_layout
+
+\begin_layout Standard
+
+Par dÃ©finition de 
+\begin_inset Formula $a$
+\end_inset
+
+ et 
+\begin_inset Formula $b$
+\end_inset
+
+, on a 
+\begin_inset Formula $\mathbb{P}(T<a)=0.025$
+\end_inset
+
+ et 
+\begin_inset Formula $\mathbb{P}(T>b)=1-0.975=0.025$
+\end_inset
+
+ donc 
+\begin_inset Formula $\mathbb{P}(T\in[a,b])=95\%$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+
+Question 2.e
+\end_layout
+
+\begin_layout Standard
+
+On a 
+\begin_inset Formula $T_{n}\in[a,b]\iff\frac{(\bar{X}-\mu)\sqrt{n}}{S_{n}}\in[a,b]\iff\bar{X}-\mu\in[\frac{S_{n}}{\sqrt{n}}a,\frac{S_{n}}{\sqrt{n}}b]\iff\mu\in[\bar{X}-\frac{S_{n}}{\sqrt{n}}b,\bar{X}-\frac{S_{n}}{\sqrt{n}}a]$
+\end_inset
+
+, d'oÃ¹ le rÃ©sultat.
+\end_layout
+
+\begin_layout Standard
+
+Par dÃ©finition de l'intervalle de confiance, on a 95% des Ã©chantillons qui vÃ©rifient cette contrainte sur la moyenne.
+\end_layout
+
+\begin_layout Paragraph
+
+Question 3.b
+\end_layout
+
+\begin_layout Standard
+
+On a 
+\begin_inset Formula $n=10$
+\end_inset
+
+, et on obtient en utilisant la mÃ©thode prÃ©cÃ©dente (quantiles de la loi de student, avec 
+\begin_inset Formula $\mu$
+\end_inset
+
+ moyenne de la sÃ©rie), 
+\begin_inset Formula $(a,b)=(-2.21,2.23)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+
+Question 3.c
+\end_layout
+
+\begin_layout Standard
+
+On obtient l'intervalle de confiance pour la moyenne: 
+\begin_inset Formula $\mu\in[19.13,20.29]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+
+Calcul de l
+\begin_inset Quotes ers
+\end_inset
+
+EMV Ã  l
+\begin_inset Quotes ers
+\end_inset
+
+aide de la commande 
+\family typewriter
+mle
+\family default
+
+\end_layout
+
+\begin_layout Paragraph
+
+Question 2.a
+\end_layout
+
+\begin_layout Standard
+
+La commande 
+\family typewriter
+dgamma
+\family default
+ calcule la valeur de la densitÃ© 
+\begin_inset Formula $p_{X}$
+\end_inset
+
+ aux points du vecteur donnÃ© en argument, l'option 
+\family typewriter
+log=true
+\family default
+ permet d'obtenir 
+\begin_inset Formula $log(p_{X})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+
+Question 2.b
+\end_layout
+
+\begin_layout Standard
+
+Avec 
+\begin_inset Formula $a,\sigma>0$
+\end_inset
+
+ et 
+\begin_inset Formula $X=(x_{i})_{1\leq i\leq n}$
+\end_inset
+
+, on a 
+\begin_inset Formula $ll(a,\sigma)=-\sum_{i=1}^{n}log(p_{X}(x_{i},a,\sigma))=-log(\prod_{i=1}^{n}p_{X}(x_{i},a,\sigma))$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+
+Question 2.c
+\end_layout
+
+\begin_layout Standard
+
+L'estimateur du maximum de vraissemblance est obtenu en minimisant la fonction 
+\begin_inset Formula $ll$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+
+Question 3
+\end_layout
+
+\begin_layout Standard
+
+On obtient 
+\begin_inset Formula $a=8.39\pm1.64$
+\end_inset
+
+ et 
+\begin_inset Formula $\sigma=6.19\pm1.25$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+
+Question 4
+\end_layout
+
+\begin_layout Standard
+
+L'IC de niveau 95% pour 
+\begin_inset Formula $a$
+\end_inset
+
+ est 
+\begin_inset Formula $[5.57,12.05]$
+\end_inset
+
+. Celui de niveau 85% pour 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ est 
+\begin_inset Formula $[4.27,9.48]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+
+Question 5
+\end_layout
+
+\begin_layout Standard
+
+La surface a Ã©tÃ© transformÃ©e par la fonction 
+\begin_inset Formula $f(z)=log(0.001+\frac{z-z_{min}}{z_{max}-z_{min}})$
+\end_inset
+
+ (on normalise pour avoir des valeurs entre 0.001 et 1.001 et on prend le log). Sans la transormation, la surface est en majoritÃ© quasi-plate et on ne peut visualiser correctement la position du minimum sur la partie plate.
+\end_layout
+
+\begin_layout Paragraph
+
+Question 6
+\end_layout
+
+\begin_layout Standard
+
+On obtient 
+\begin_inset Formula $a=5.14$
+\end_inset
+
+ et 
+\begin_inset Formula $\sigma=2.88$
+\end_inset
+
+ avec pour intervalles de confiance Ã  95% respectifs 
+\begin_inset Formula $[4.71,5.59]$
+\end_inset
+
+ et 
+\begin_inset Formula $[2.64,3.16]$
+\end_inset
+
+ ce qui est assez proches des vraies valeurs.
+\end_layout
+
+\begin_layout Paragraph
+
+Question 7
+\end_layout
+
+\begin_layout Standard
+
+On s'apercoit que le point obtenu est relativement constant lorsqu'on fait varier les conditions initiales (
+\begin_inset Formula $a=1,2,3,4;\sigma=1,2,3,4$
+\end_inset
+
+), par contre on obtient des points singuliers comme pour 
+\begin_inset Formula $\sigma=0.5$
+\end_inset
+
+ pour lequel le rÃ©sultat diverge.
+\end_layout
+
+\begin_layout Paragraph
+
+Question 8.a
+\end_layout
+
+\begin_layout Standard
+
+On minimise la log-vraisemblance comme pour l'estimation des paramÃštres de la loi gamma; la fonction est une adaptation de la fonction pour la loi gamma.
+\end_layout
+
+\begin_layout Paragraph
+
+Question 8.b
+\end_layout
+
+\begin_layout Standard
+
+Les estimations obtenues sont 
+\begin_inset Formula $a=6.53$
+\end_inset
+
+ (IC 
+\begin_inset Formula $[3.65,9.39]$
+\end_inset
+
+) et 
+\begin_inset Formula $s=10.14$
+\end_inset
+
+ (IC 
+\begin_inset Formula $[7.68,13.41]$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Paragraph
+
+Question 8.c
+\end_layout
+
+\begin_layout Standard
+
+Pour 
+\begin_inset Formula $a>0,s>1$
+\end_inset
+
+, le rÃ©sultat obtenu semble Ãªtre constant. Cela est rendu possible car la fonction de log-vraissemblance est convexe pour une loi de Cauchy, l'optimisation donne donc toujours le mÃªme point sur cet ensemble.
+\end_layout
+
+\begin_layout Paragraph
+
+Question 8.d
+\end_layout
+
+\begin_layout Standard
+
+On obtient la surface:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset space \hfill{}
+
+\end_inset
+
+
+\begin_inset Graphics 
+	filename 3d.pdf
+	scale 30
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{lstlisting}
+\end_layout
+
+\end_inset
+
+[basicstyle=
+\size tiny
+
+\size default
+,numbers=left,numberstyle=
+\size tiny
+
+\size default
+,stepnumber=5]
+\end_layout
+
+\begin_layout Standard
+
+#comparison of estimators for position parameter
+\end_layout
+
+\begin_layout Standard
+
+n=10000; X=rnorm(n,mean=5,sd=2); par(bg="cornsilk",lwd=2,col="darkblue") hist(X,breaks=40,freq=F,col="cyan") curve(dnorm(x,mean=5,sd=2),add=T)
+\end_layout
+
+\begin_layout Standard
+
+locationestimator=function(U,theta)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+ n=length(U) theta1=cumsum(U)/(1:n) theta2=1:n;theta3=1:n; for (i in 1:n)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+ theta2[i]=median(U[1:i]) theta3[i]=(min(U[1:i])+max(U[1:i]))/2 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ par(mfrow=c(1,3),bg="cornsilk",lwd=2,col="darkblue") plot(1:n,theta1,type="l",main="moyenne") abline(h=theta,col="darkred") plot(1:n,theta2,type="l",main="mediane") abline(h=theta,col="darkred") plot(1:n,theta3,type="l",main="Minmax") abline(h=theta,col="darkred") #return(matrix(c(theta1,theta2,theta3),n,3)) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+locationestimator(rnorm(100000,mean=5,sd=2),5)
+\end_layout
+
+\begin_layout Standard
+
+compareestimators=function(N,n)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+ par(mfrow=c(1,1)) X=matrix(rcauchy(N*n,location=5,scale=2),N,n) theta1=apply(X,1,mean) theta2=apply(X,1,median) #theta3=(apply(X,1,min)+apply(X,1,max))/2 par(bg="cornsilk",lwd=2,col="darkblue") boxplot(theta1,theta2,col="cyan") 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+compareestimators(200,1000)
+\end_layout
+
+\begin_layout Standard
+
+checkstudent=function(N,n,mu,sigma) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+ X=matrix(rnorm(N*n,mean=mu,sd=sigma),N,n) t=sqrt(n)*(apply(X,1,mean)-mu)/apply(X,1,sd) return(t) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+N=20000; n=1000; t=checkstudent(N,n,100,50) par(bg="cornsilk",lwd=2,col="darkblue") hist(t,breaks=100,freq=F,col="cyan") curve(dt(x,n-1),add=T,lwd=2)
+\end_layout
+
+\begin_layout Standard
+
+quantile(x=t,probs=c(0.025,0.975))
+\end_layout
+
+\begin_layout Standard
+
+quants = function(n,Nrange,ind)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+ res=c() for(N in Nrange)
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+ res = append(res,quantile(x=checkstudent(N,n,100,50),probs=c(0.025,0.975))[[1]]) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ return(res) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+plot(x=seq(from=5000,to=50000,by=1000),y=quants(1000,seq(from=5000,to=50000,by=1000),1),type="l")
+\end_layout
+
+\begin_layout Standard
+
+X=c(19.6, 19.9, 20.4, 19.8, 20.5, 21.0, 18.5, 19.7, 18.4, 19.4) n=10
+\end_layout
+
+\begin_layout Standard
+
+mean(X) - quantile(x=checkstudent(20000,10,mean(X),sd(X)),probs=c(0.025,0.975)) * sd(X)/sqrt(10)
+\end_layout
+
+\begin_layout Standard
+
+#X=c(77.551, 45.195, 50.626, 39.878, 29.137, 57.321, 39.140, 66.776, 48.028, 42.325, 31.200, 38.632, 42.914, 60.969, 22.076, 52.446, 45.257, 42.626, 62.504, 22.684, 69.196, 42.383, 61.339, 45.803, 74.707, 33.048, 72.423, 43.670, 65.279, 42.714, 59.785, 101.742, 59.641, 44.749, 44.161, 58.488, 46.448, 25.280, 67.619, 66.846, 80.208, 98.492, 41.149, 40.395, 22.220, 34.628, 77.768, 48.161,48.909, 66.267)
+\end_layout
+
+\begin_layout Standard
+
+X = c(-7.54, 82.51, 14.27, 3.96, 189.98, 17.20, -20.07, 52.66, 93.47, -33.57, 13.13, -1.26, 12.69, 53.33, 2.85, -7.25, 13.30, -5.67, -38.99, 24.24, 4.17, 12.30, 21.59, -6.70, 1.24, 13.91, 30.24, 3.35, 6.45, -26.22, 72.65, 10.12, -1.64, 21.49, 391.11, 26.53, 146.60, 2.11, 5.84, 14.25, 7.17, 4.96, -9.55, 7.89, -2.31, 91.11, 8.39, 6.23, 25.45, 9.36, 102.44, -7.28, -40.02, -8.86, 14.11, 6.84, -11.15, -6.67, -84.82, -241.41, -0.14, -72.95, 21.09, 53.47, -3.80, -10.64, 19.71, 45.89, -124.30, -2.02, -1.67, 7.81, -9.76, 6.25, 16.68, 8.88, 32.14, 1.29, -10.00, -5.03, -66.77, 12.85, 15.32, 31.27, 6.59, 3.92, 8.61, 15.38, -1.34, 14.11, 10.53, 2.35, -94.19, 16.45, 2.97, 12.26, 4.15, 10.63, 5.47)
+\end_layout
+
+\begin_layout Standard
+
+ll=function(a=0.5, sigma=1.5) 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+ if(a > 0 && sigma > 0) -sum(dcauchy(X, location=a, scale=sigma, log=TRUE)) else NA 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+library(stats4) fit = mle(ll) summary(fit)
+\end_layout
+
+\begin_layout Standard
+
+vcov(fit) par(mfrow=c(2,1),bg="cornsilk",col="blue",lwd=2) plot(profile(fit), absVal=FALSE) confint(fit,level=0.95)
+\end_layout
+
+\begin_layout Standard
+
+# Calcul des valeurs de la log-vraisemblance K=80 x=(1:K)/4; y=(1:K)/4; z=c(); for (i in 1:length(x)) for (j in 1:length(y)) z=c(z,ll(x[i],y[j])) # Transformation des valeurs calculeÌes z=matrix(z,length(x),length(y)) z=log(0.001+((z-min(z))/(max(z)-min(z)))) # Le contenu des 7 lignes suivantes peut etre utiliseÌ comme une # boiÌte noire nrz <- nrow(z) ncz <- ncol(z) jet.colors <- colorRampPalette( c("blue", "green") ) nbcol <- 100 color <- jet.colors(nbcol) zfacet <- z[-1, -1] + z[-1, -ncz] + z[-nrz, -1] + z[-nrz, -ncz] facetcol <- cut(zfacet, nbcol) # Visualisation des reÌsultats par(bg="cornsilk",lwd=1,mfrow=c(1,1)) #image(x,y,z,col = cm.colors(50)) #contour(x,y,z,add=T,col="darkred") persp(x, y, z,ticktype="detailed",expand=0.5,col=color[facetcol],shade=0.4)
+\end_layout
+
+\begin_layout Standard
+
+X = rgamma(1000,shape=5,scale=3) fit = mle(ll) summary(fit) confint(fit,level=0.95)
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
